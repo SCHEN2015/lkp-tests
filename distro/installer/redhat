@@ -1,0 +1,11 @@
+if ! rpm -q epel-release >/dev/null; then
+	yum install -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+
+	subscription-manager repos --enable "rhel-*-optional-rpms" --enable "rhel-*-extras-rpms"
+	yum-config-manager --enable "*rhel-server-optional*"
+	yum-config-manager --enable "*rhel-server-extras*"
+
+	yum makecache fast
+fi
+
+yum install -y $*
