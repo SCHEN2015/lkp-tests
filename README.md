@@ -3,9 +3,10 @@
 ## Getting started
 
 ```
-	git clone https://github.com/01org/lkp-tests.git
-
+	git clone https://github.com/SCHEN2015/lkp-tests.git
 	cd lkp-tests
+
+	git checkout -b rhel-dev origin/rhel-dev
 	make install
 
 	lkp help
